@@ -1,7 +1,9 @@
-var app1 = new Vue({
-    el: "#reverseMessage",
+var app = new Vue({
+    el: "#app",
     data: {
-        message: ""
+        message: "Hello VueJS",
+        name: "other",
+        numbers: [1,2,3,4,5,6]
     },
     methods: {
         openURL: function(){
@@ -14,11 +16,14 @@ var app1 = new Vue({
                 color: 'red',
                 border: '1px solid red'
             }
+        },
+        reverseMessage: function(){
+            return this.message.split(' ').reverse().join(' ');
         }
     }
 })
 
-console.log(app1);
+console.log(app);
 
 // var app6 = new Vue({
 //     el: '#app-6',

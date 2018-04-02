@@ -7,11 +7,26 @@
     <title>Test VueJS</title>
 </head>
 <body>
-    <div id="reverseMessage" v-bind:style="styleObj">
-        <p> {{ message }} </p>
+    <div id="app" v-bind:style="styleObj">
+        <p> Original Message: {{ message }} </p>
+        <p> Reversed Message: {{ reverseMessage }}</p>
         <input v-model="message">
         <button v-on:click="openURL">Click me</button>
+        <template v-if="name === 'minh'">
+            <p>Minh</p>
+        </template>
+        <template v-else-if="name === 'ngoc'">
+            <p>Ngoc</p>
+        </template>
+        <template v-else>
+            <p>Not Ngoc or Minh</p>
+        </template>
+        <p v-for="number in numbers">
+            {{ number }}
+        </p>
     </div>
+
+    
     
     <!-- <div id="app-6">
         <p>{{ message }}</p>
