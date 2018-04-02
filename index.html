@@ -37,6 +37,12 @@
                 <button v-on:click="removeTodo(index)" class="btn btn-danger">Remove</button>
             </li>
         </ul>
+
+        <button
+        v-on:click="countNumber"
+        v-bind:disabled="isDisabled">Count</button>
+        <p> You click {{ count }} times</p>
+        <p v-if="count === 10">Success! You click {{ count }} times</p>
     </div>
 
     

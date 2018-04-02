@@ -26,6 +26,8 @@ var app = new Vue({
         numbers: [1,2,3,4,5,6],
         newTodoText: '',
         todos: data,
+        count: 0,
+        isDisabled: false
     },
     methods: {
         openURL: function(){
@@ -40,6 +42,11 @@ var app = new Vue({
         },
         removeTodo: function(index){
             this.todos.splice(index, 1);
+        },
+        countNumber: function(){
+            this.count++;
+            if(this.count === 10)
+                this.isDisabled = true;
         }
     },
     computed: {
