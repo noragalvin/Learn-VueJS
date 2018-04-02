@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test VueJS</title>
+</head>
+<body>
+    <div id="reverseMessage" v-bind:style="styleObj">
+        <p> {{ message }} </p>
+        <input v-model="message">
+        <button v-on:click="openURL">Click me</button>
+    </div>
+    
+    <!-- <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+      </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
