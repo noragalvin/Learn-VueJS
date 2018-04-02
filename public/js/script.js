@@ -1,13 +1,45 @@
+var data = [
+    {
+        id: 1,
+        title: "Wake up"
+    },
+    {
+        id: 2,
+        title: "Have Breakfast"
+    },
+    {
+        id: 3,
+        title: "Go to work"
+    },
+    {
+        id: 4,
+        title: "Have lunch"
+    }
+];
+var len = data.length;
+
 var app = new Vue({
     el: "#app",
     data: {
         message: "Hello VueJS",
         name: "other",
-        numbers: [1,2,3,4,5,6]
+        numbers: [1,2,3,4,5,6],
+        newTodoText: '',
+        todos: data,
     },
     methods: {
         openURL: function(){
             window.open('https://www.facebook.com');
+        },
+        addNewTodo: function(){
+            this.todos.push({
+                id: ++len,
+                title: this.newTodoText
+            })
+            this.newTodoText = ''
+        },
+        removeTodo: function(index){
+            this.todos.splice(index, 1);
         }
     },
     computed: {
@@ -23,11 +55,4 @@ var app = new Vue({
     }
 })
 
-console.log(app);
-
-// var app6 = new Vue({
-//     el: '#app-6',
-//     data: {
-//       message: 'Hello Vue!'
-//     }
-//   })
+console.log(typeof app.todos);
