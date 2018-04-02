@@ -39,10 +39,12 @@
         </ul>
 
         <button
-        v-on:click="countNumber"
-        v-bind:disabled="isDisabled">Count</button>
-        <p> You click {{ count }} times</p>
-        <p v-if="count === 10">Success! You click {{ count }} times</p>
+        v-on:click="countSheep"
+        v-bind:disabled="isDisabled">Đếm cừu</button>
+        <p v-if="count != 10"> {{ count }} con cừu </p>
+        <p v-if="count === 10">{{ count }} con cừu rồi ngủ thôi :v</p>
+
+        
     </div>
 
     

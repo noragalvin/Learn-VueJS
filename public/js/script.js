@@ -43,10 +43,13 @@ var app = new Vue({
         removeTodo: function(index){
             this.todos.splice(index, 1);
         },
-        countNumber: function(){
+        countSheep: function(){
             this.count++;
             if(this.count === 10)
                 this.isDisabled = true;
+        },
+        beLikeStopPropagation: function(){
+            
         }
     },
     computed: {
