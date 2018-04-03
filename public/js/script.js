@@ -48,8 +48,9 @@ var app = new Vue({
             if(this.count === 10)
                 this.isDisabled = true;
         },
-        beLikeStopPropagation: function(){
-            
+        resetCount: function () {
+            this.count = 0;
+            this.isDisabled = false;    
         }
     },
     computed: {

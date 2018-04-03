@@ -41,15 +41,13 @@
         <button
         v-on:click="countSheep"
         v-bind:disabled="isDisabled">Đếm cừu</button>
+        <button
+        v-on:click="resetCount">Reset</button>
         <p v-if="count != 10"> {{ count }} con cừu </p>
         <p v-if="count === 10">{{ count }} con cừu rồi ngủ thôi :v</p>
 
         
     </div>
-
-    
-    
-
     <!-- JS -->
     <script src="./public/js/jquery-3.3.1.min.js"></script>
     <script src="./public/js/popper.min.js"></script>
